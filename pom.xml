@@ -1,0 +1,168 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ztgeo.xyData_Client</groupId>
+  <artifactId>XyData_Client</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>XyData_Client Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.2</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- 添加Spring支持 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>4.1.7.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-beans</artifactId>
+	    <version>4.1.7.RELEASE</version>
+	</dependency>
+	<dependency>
+	     <groupId>org.springframework</groupId>
+	     <artifactId>spring-tx</artifactId>
+	     <version>4.1.7.RELEASE</version>
+	    </dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>4.1.7.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context-support</artifactId>
+	    <version>4.1.7.RELEASE</version>
+	</dependency>
+	 
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>4.1.7.RELEASE</version>
+	</dependency>
+	 
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>4.1.7.RELEASE</version>
+	</dependency>
+	 
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	    <version>4.1.7.RELEASE</version>
+	</dependency>
+	 
+	 
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aspects</artifactId>
+	    <version>4.1.7.RELEASE</version>
+	</dependency>
+	 
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>4.1.7.RELEASE</version>
+	</dependency>
+	
+	<!-- 添加cxf支持  -->
+		<!-- <dependency>
+		    <groupId>org.apache.cxf</groupId>
+		    <artifactId>cxf-core</artifactId>
+		    <version>3.1.5</version>
+		</dependency>
+		 
+		<dependency>
+		    <groupId>org.apache.cxf</groupId>
+		    <artifactId>cxf-rt-frontend-jaxws</artifactId>
+		    <version>3.1.5</version>
+		</dependency>
+		 
+		<dependency>
+		    <groupId>org.apache.cxf</groupId>
+		    <artifactId>cxf-rt-transports-http</artifactId>
+		    <version>3.1.5</version>
+		</dependency> -->
+	
+		<!-- json包 处理json数据 json包需要区分jdk版本-->
+		<dependency>
+		    <groupId>net.sf.json-lib</groupId>
+		    <artifactId>json-lib</artifactId>
+		    <version>2.4</version>
+		    <classifier>jdk15</classifier>
+		</dependency>
+		
+			<!--阿里巴巴的json处理 -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.35</version>
+		</dependency>
+		
+		<!-- 数据库连接包 ojdbc是没有正版授权的解决办法是 找到本地ojdbc改成下面version 然后安装在本地仓库 -->
+		<!--  命令如下:mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.4.0 -Dpackaging=jar -Dfile=D:\work\jar\ojdbc14-10.2.0.4.0.jar-->
+		<dependency>
+		    <groupId>com.oracle</groupId>
+		    <artifactId>ojdbc14</artifactId>
+		    <version>10.2.0.4.0</version>
+		</dependency>
+		
+		
+		<!--gson用来将对象转存为map  -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.0</version>
+		</dependency>
+		
+		<!-- bson包用来处理mongodb的数据 -->
+		<!-- <dependency>
+		    <groupId>org.mongodb</groupId>
+		    <artifactId>bson</artifactId>
+		    <version>3.4.2</version>
+		</dependency> -->
+		
+		<!-- mongodb的java驱动包 用来连接mongodb -->
+		
+		<!-- <dependency>
+		    <groupId>org.mongodb</groupId>
+		    <artifactId>mongo-java-driver</artifactId>
+	    	<version>3.4.0</version>
+	    </dependency> -->
+	    <!--dom4j 用来解析xml  -->
+	    <dependency>
+		    <groupId>dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
+		    <version>1.6</version>
+		</dependency>
+	    
+	    
+	    <!-- log4j-->
+		<dependency>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.17</version>
+		</dependency>
+			    
+		<!-- 定时任务 -->
+		<!-- https://mvnrepository.com/artifact/aopalliance/aopalliance -->
+		<dependency>
+		    <groupId>aopalliance</groupId>
+		    <artifactId>aopalliance</artifactId>
+		    <version>1.0</version>
+		</dependency>
+				
+		
+  </dependencies>
+  <!-- <build>
+    <finalName>XyData_Client</finalName>
+  </build> -->
+</project>

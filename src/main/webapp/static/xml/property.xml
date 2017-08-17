@@ -1,0 +1,14 @@
+<?xml version="1.0"?>  
+
+<root>
+	
+	<!-- 数据库连接URL -->
+	<url>jdbc:oracle:thin:@localhost:1521:orcl</url>
+	
+	<!-- 数据库连接用户名 -->
+	<username>dybdcyjk</username>
+	
+	<!-- 数据库连接密码 -->
+	<password>dybdcyjk</password>
+
+</root>

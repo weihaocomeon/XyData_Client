@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+/* 修改默认的行高 */
+.datagrid-cell, .datagrid-cell-group, .datagrid-header-rownumber, .datagrid-cell-rownumber {
+        height: 32px;
+    } 
+/* .divBig{
+    border: solid 5px white;
+    background-color: white;
+    height:5%;
+}
+ */
